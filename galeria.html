@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Galeria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="gallery-page">
+    <div class="music-player">
+        <i class="fas fa-music"></i>
+        <audio id="background-music" loop>
+            <source src="msc/Poesia Acústica #2 - Sobre Nós - Delacruz I Maria I Ducon I Luiz Lins I Diomedes I Bk' I Kayuá.mp3" type="audio/mpeg">
+        </audio>
+        <button id="toggle-music">
+            <i class="fas fa-play"></i>
+        </button>
+    </div>
+
+    <div class="gallery-container">
+        <h1>Nossa História</h1>
+        
+        <section id="fotos" class="section">
+            <h2>Nossas Fotos</h2>
+            <div class="gallery-grid">
+                <!-- Exemplo de como adicionar fotos: -->
+                <div class="gallery-item">
+                    <img src="img/amor1.jpg" alt="Momento especial 1" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/amor2.jpg" alt="Momento especial 1" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/amor3.jpg" alt="Momento especial 1" loading="lazy">
+                </div>
+                <!-- Adicione mais fotos seguindo o mesmo padrão -->
+            </div>
+        </section>
+
+        <section id="videos" class="section">
+            <h2>Nossos Vídeos</h2>
+            <div class="gallery-grid">
+                <!-- Exemplo de como adicionar vídeos: -->
+                <div class="gallery-item video-container">
+                    <video controls preload="none" poster="thumbnail1.jpg">
+                        <source src="vdo/amor1.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+                <div class="gallery-item video-container">
+                    <video controls preload="none" poster="thumbnail1.jpg">
+                        <source src="vdo/amor2.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+                <!-- Adicione mais vídeos seguindo o mesmo padrão -->
+            </div>
+        </section>
+    </div>
+
+    <a href="index.html" class="home-link">
+        <i class="fas fa-home"></i>
+        Voltar
+    </a>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagem em tamanho grande">
+    </div>
+
+    <div id="fullscreen-modal" class="modal">
+        <span class="close" onclick="closeFullScreen()">&times;</span>
+        <img id="fullscreen-image" src="" alt="Imagem em Tela Cheia">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
